@@ -1,10 +1,10 @@
-temperature = 75
-forecast = "rainy"
+age = 26
+color = "brown"
 
-if temperature > 80 or forecast != "rainy":
-    print("Go Outside.")
+if age == 25 and color == "brown":
+    print("You are my crush.")
 else:
-    print("Stay Inside.")
+    print("You are my love.")
 
 
 
