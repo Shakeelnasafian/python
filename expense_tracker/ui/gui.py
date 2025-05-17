@@ -67,10 +67,10 @@ class ExpenseTrackerGUI:
         for row in fetch_all_expenses():
             self.tree.insert("", "end", values=row[1:])
 
-def main():
-    root = tk.Tk()
-    app = ExpenseTrackerGUI(root)
-    root.mainloop()
+def run_gui():
+    import tkinter as tk
+    from expense_tracker.ui import gui
 
-if __name__ == "__main__":
-    main()
+    root = tk.Tk()
+    app = gui.ExpenseTrackerGUI(root)
+    root.mainloop()
