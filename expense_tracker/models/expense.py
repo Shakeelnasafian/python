@@ -11,10 +11,12 @@ class Expense:
     def __repr__(self):
         return f"{self.name} | {self.amount} | {self.category} | {self.date} | {self.description}"
 
-def add_expense(name, amount, category, date, description):
-    exp = Expense(name, amount, category, date, description)
-    insert_expense(exp)
+    @classmethod
+    def add_expense(cls, name, amount, category, date, description):
+        exp = cls(name, amount, category, date, description)
+        insert_expense(exp)
 
-def get_all_expenses():
-    rows = fetch_all_expenses()
-    return [Expense(row[1], row[2], row[3], row[4], row[5]) for row in rows]
+    @classmethod
+    def get_all_expenses(cls):
+        rows = fetch_all_expenses()
+        return [cls(row[1], row[2], row[3], row[4], row[5]) for row in rows]
