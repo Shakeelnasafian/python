@@ -1,0 +1,201 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "age": 28,
+    "email": "alice.johnson@example.com",
+    "address": { "city": "New York", "country": "USA" },
+    "hobbies": ["reading", "yoga", "chess"],
+    "active": true
+  },
+
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "age": 34,
+    "email": "bob.smith@example.com",
+    "address": { "city": "Los Angeles", "country": "USA" },
+    "hobbies": ["basketball", "cooking"],
+    "active": false
+  },
+
+  {
+    "id": 3,
+    "name": "Charlie Brown",
+    "age": 41,
+    "email": "charlie.brown@example.com",
+    "address": { "city": "London", "country": "UK" },
+    "hobbies": ["cycling", "gardening", "history"],
+    "active": true
+  },
+
+  {
+    "id": 4,
+    "name": "Dana White",
+    "age": 22,
+    "email": "dana.white@example.com",
+    "address": { "city": "Toronto", "country": "Canada" },
+    "hobbies": ["music", "travel", "gaming"],
+    "active": true
+  },
+
+  {
+    "id": 5,
+    "name": "Ethan Lee",
+    "age": 30,
+    "email": "ethan.lee@example.com",
+    "address": { "city": "Sydney", "country": "Australia" },
+    "hobbies": ["surfing", "coding", "tennis"],
+    "active": false
+  },
+
+  {
+    "id": 6,
+    "name": "Fatima Noor",
+    "age": 27,
+    "email": "fatima.noor@example.com",
+    "address": { "city": "Dubai", "country": "UAE" },
+    "hobbies": ["swimming", "calligraphy"],
+    "active": true
+  },
+
+  {
+    "id": 7,
+    "name": "George Hill",
+    "age": 45,
+    "email": "george.hill@example.com",
+    "address": { "city": "Chicago", "country": "USA" },
+    "hobbies": ["golf", "fishing", "reading"],
+    "active": false
+  },
+
+  {
+    "id": 8,
+    "name": "Hannah Park",
+    "age": 29,
+    "email": "hannah.park@example.com",
+    "address": { "city": "Seoul", "country": "South Korea" },
+    "hobbies": ["drawing", "blogging"],
+    "active": true
+  },
+
+  {
+    "id": 9,
+    "name": "Ivan Petrov",
+    "age": 35,
+    "email": "ivan.petrov@example.com",
+    "address": { "city": "Moscow", "country": "Russia" },
+    "hobbies": ["hiking", "history", "coding"],
+    "active": true
+  },
+
+  {
+    "id": 10,
+    "name": "Julia Wang",
+    "age": 26,
+    "email": "julia.wang@example.com",
+    "address": { "city": "Beijing", "country": "China" },
+    "hobbies": ["singing", "traveling"],
+    "active": true
+  },
+
+  {
+    "id": 11,
+    "name": "Khalid Yusuf",
+    "age": 32,
+    "email": "khalid.yusuf@example.com",
+    "address": { "city": "Cairo", "country": "Egypt" },
+    "hobbies": ["football", "poetry"],
+    "active": true
+  },
+
+  {
+    "id": 12,
+    "name": "Laura Smith",
+    "age": 39,
+    "email": "laura.smith@example.com",
+    "address": { "city": "Dublin", "country": "Ireland" },
+    "hobbies": ["gardening", "movies", "cooking"],
+    "active": false
+  },
+
+  {
+    "id": 13,
+    "name": "Mohammed Ali",
+    "age": 44,
+    "email": "mohammed.ali@example.com",
+    "address": { "city": "Riyadh", "country": "Saudi Arabia" },
+    "hobbies": ["archery", "reading Quran"],
+    "active": true
+  },
+
+  {
+    "id": 14,
+    "name": "Natalie Cruz",
+    "age": 31,
+    "email": "natalie.cruz@example.com",
+    "address": { "city": "Madrid", "country": "Spain" },
+    "hobbies": ["dancing", "music"],
+    "active": false
+  },
+
+  {
+    "id": 15,
+    "name": "Oscar Torres",
+    "age": 25,
+    "email": "oscar.torres@example.com",
+    "address": { "city": "Mexico City", "country": "Mexico" },
+    "hobbies": ["video games", "biking"],
+    "active": true
+  },
+
+  {
+    "id": 16,
+    "name": "Priya Patel",
+    "age": 23,
+    "email": "priya.patel@example.com",
+    "address": { "city": "Mumbai", "country": "India" },
+    "hobbies": ["photography", "cooking", "travel"],
+    "active": true
+  },
+
+  {
+    "id": 17,
+    "name": "Quentin Dupont",
+    "age": 38,
+    "email": "quentin.dupont@example.com",
+    "address": { "city": "Paris", "country": "France" },
+    "hobbies": ["wine tasting", "cycling"],
+    "active": false
+  },
+
+  {
+    "id": 18,
+    "name": "Rania Fadel",
+    "age": 36,
+    "email": "rania.fadel@example.com",
+    "address": { "city": "Amman", "country": "Jordan" },
+    "hobbies": ["crafts", "hiking"],
+    "active": true
+  },
+
+  {
+    "id": 19,
+    "name": "Steve Rogers",
+    "age": 40,
+    "email": "steve.rogers@example.com",
+    "address": { "city": "Brooklyn", "country": "USA" },
+    "hobbies": ["boxing", "motorcycles"],
+    "active": false
+  },
+
+  {
+    "id": 20,
+    "name": "Tariq Ahmad",
+    "age": 33,
+    "email": "tariq.ahmad@example.com",
+    "address": { "city": "Lahore", "country": "Pakistan" },
+    "hobbies": ["cricket", "tech reviews"],
+    "active": true
+  }
+]
