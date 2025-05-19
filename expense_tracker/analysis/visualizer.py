@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from expense_tracker.models.expense import get_all_expenses
+from expense_tracker.models.expense import Expense
 
 def plot_by_category(expenses):
     from collections import defaultdict
@@ -12,5 +12,5 @@ def plot_by_category(expenses):
 
 
 def show_graph():
-    expenses = get_all_expenses()
+    expenses = Expense.get_all_expenses()
     plot_by_category(expenses)

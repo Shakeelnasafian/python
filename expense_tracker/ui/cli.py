@@ -1,4 +1,4 @@
-from expense_tracker.models.expense import add_expense, get_all_expenses
+from expense_tracker.models.expense import Expense
 from expense_tracker.analysis.visualizer import show_graph
 
 def run_cli():
@@ -12,9 +12,9 @@ def run_cli():
             category = input("Category: ")
             date = input("Date (YYYY-MM-DD): ")
             desc = input("Description: ")
-            add_expense(name, amount, category, date, desc)
+            Expense.add_expense(name, amount, category, date, desc)
         elif choice == '2':
-            expenses = get_all_expenses()
+            expenses = Expense.get_all_expenses()
             for exp in expenses:
                 print(exp)
         elif choice == '3':
