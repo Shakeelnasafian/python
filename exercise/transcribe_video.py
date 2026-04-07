@@ -28,19 +28,44 @@ def write_srt(path: Path, segments):
         for i, s in enumerate(segments, start=1):
             f.write(f"{i}\n{ts_srt(s['start'])} --> {ts_srt(s['end'])}\n{s['text'].strip()}\n\n")
 
+# def run_whisper(model: WhisperModel, in_path: Path, task: str, language: str|None,
+#                 vad: bool, beam_size: int):
+#     segments_iter, info = model.transcribe(
+#         str(in_path),
+#         task=task,                 # "transcribe" (original language) or "translate" (to English)
+#         language=language,         # None = auto-detect; set "ar" to force Arabic, "en" to force English, etc.
+#         vad_filter=vad,
+#         beam_size=beam_size,
+#     )
+#     segs = []
+#     for seg in segments_iter:
+#         segs.append({"start": seg.start, "end": seg.end, "text": seg.text})
+#     return segs, info
+
 def run_whisper(model: WhisperModel, in_path: Path, task: str, language: str|None,
                 vad: bool, beam_size: int):
     segments_iter, info = model.transcribe(
         str(in_path),
-        task=task,                 # "transcribe" (original language) or "translate" (to English)
-        language=language,         # None = auto-detect; set "ar" to force Arabic, "en" to force English, etc.
+        task=task,
+        language=language,
         vad_filter=vad,
         beam_size=beam_size,
     )
+
+    total_duration = getattr(info, "duration", None)  # duration in seconds (if available)
     segs = []
-    for seg in segments_iter:
-        segs.append({"start": seg.start, "end": seg.end, "text": seg.text})
+
+    if total_duration:  # if we know total duration, show progress
+        with tqdm(total=total_duration, unit="sec", desc=f"{task.capitalize()} Progress") as pbar:
+            for seg in segments_iter:
+                segs.append({"start": seg.start, "end": seg.end, "text": seg.text})
+                pbar.update(seg.end - (segs[-2]['end'] if len(segs) > 1 else 0))
+    else:  # fallback if duration not available
+        for seg in tqdm(segments_iter, desc=f"{task.capitalize()} Progress", unit="segment"):
+            segs.append({"start": seg.start, "end": seg.end, "text": seg.text})
+
     return segs, info
+
 
 def main():
     p = argparse.ArgumentParser(description="Transcribe video/audio (mixed Arabic/English) with faster-whisper.")
